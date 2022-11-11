@@ -24,9 +24,9 @@
                     @forelse ($navItems as $navItem)
                     <li class="nav-item">
                         @if (View::getSection('title')==$navItem['title'])
-                        <a class="nav-link active" aria-current="page" href="">{{$navItem['item']}}</a>
+                        <a class="nav-link active" aria-current="page" href="/{{$navItem['navLink']}}">{{$navItem['item']}}</a>
                         @else
-                        <a class="nav-link" href="">{{$navItem['item']}}</a>
+                        <a class="nav-link" href="/{{$navItem['navLink']}}">{{$navItem['item']}}</a>
                         @endif
                     </li>
                     @empty

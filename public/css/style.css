@@ -222,6 +222,102 @@ img {
 }
 /* end of about us section */
 
+
+/* additional stuff */
+.update {
+    padding: 0.5rem 1.5rem;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    background-color: red;
+    cursor: pointer;
+}
+
+.warning {
+    text-align: center;
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* .warning a {
+    margin: 1rem;
+    padding: 1rem 2rem;
+    text-align: center;
+    background-color: red;
+    color: white;
+} */
+/* end of additional stuff */
+
+/* book collection */
+.book-list .book-list-body .table {
+    margin-bottom: 0;
+}
+
+.book-list .book-list-body .table tbody .action-list li a {
+    color: #fff;
+    font-size: 15px;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease 0s;
+}
+.book-list .book-list-body .table tbody .action-list li a:hover { 
+    text-shadow: 3px 3px 0 rgba(255,255,255,0.3); 
+}
+
+.book-list .book-list-body .table tbody .action-list li a:before,
+.book-list .book-list-body .table tbody .action-list li a:after {
+    content: attr(data-tip);
+    color: white;
+    background-color: black;
+    font-size: 12px;
+    padding: 5px 7px;
+    border-radius: 4px;
+    text-transform: capitalize;
+    display: none;
+    transform: translateX(-50%);
+    position: absolute;
+    left: 50%;
+    top: -32px;
+    transition: all 0.3s ease 0s;
+}
+
+.book-list .book-list-body .table tbody .action-list li a:after {
+    content: '';
+    height: 15px;
+    width: 15px;
+    padding: 0;
+    border-radius: 0;
+    transform: translateX(-50%) rotate(45deg);
+    top: -18px;
+    z-index: -1;
+}
+
+.book-list .book-list-body .table tbody .action-list li a:hover:before,
+.book-list .book-list-body .table tbody .action-list li a:hover:after {
+    display: block;
+}
+
+.book-list {
+    background: linear-gradient(to right, #414141, #000000);
+    padding: 0;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 0 0 5px rgba(0,0,0,0.05),0 0 0 10px rgba(0,0,0,0.05);
+}
+
+.book-list .book-list-body .table tbody tr td, 
+.book-list .book-list-body .table thead tr th {
+    color: white;
+}
+
+.book-list .book-list-body .table tbody tr:nth-child(even) { 
+    background-color: rgba(255,255,255,0.2); 
+}
+/* end of book collection */
+
 /* footer section */
 .footer-section {
     background-image: linear-gradient(180deg, #28313B 30%, #485461 100%);
@@ -270,3 +366,127 @@ img {
     height: 55px;
 }
 /* end of footer section */
+
+/* Insert Book page */
+.book-card {
+    background: linear-gradient(159deg, #2d2d3a 0%, #2b2b35 100%);
+    -webkit-box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.2);
+    box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.2);
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.book-a {
+    transition: 0.55s ease-in-out;
+    transform: scale(1);
+    opacity: 1;
+}
+
+.book-form-field {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.book-submit-frame {
+    position: relative;
+    height: 45px;
+}
+
+.book-form-field input,
+.book-form-field textarea {
+    height: 50px;
+    width: 100%;
+    background: linear-gradient(159deg, #252532 0%, #23232d 100%);
+    border: none;
+    color: #fafafc;
+    padding-left: 65px;
+    padding-right: 15px;
+    box-shadow: inset 0 1px 4px 0 rgb(15 15 20 / 10%);
+    margin-bottom: 0;
+    transition: 0.4s ease-in-out;
+}
+
+.book-form label {
+    text-align: center;
+    color: #8c8c8e;
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background: #20202a;
+    top: 0;
+    left: 0;
+    padding: 0 15px;
+    text-transform: uppercase;
+    font-size: 11px;
+    line-height: 50px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    transition: 0.4s ease-in-out;
+    cursor: text;
+}
+
+.book-form-field textarea {
+    padding-left: 15px;
+    padding-top: 15px;
+    height: 150px;
+    border-left: solid 50px #20202a;
+}
+
+.bookForm-img, .insert-img {
+    padding: 1rem;
+    width: 50%;
+    display: inline-block;
+}
+
+.bookForm-img img, .insert-img img {
+    max-width: 100%;
+    max-height: 300px;
+    display: block;
+    margin: auto;
+    animation: zoom-in-out 4s linear infinite;
+}
+
+@keyframes zoom-in-out {
+    0% {
+        transform: scale(1, 1);
+    }
+    50% {
+        transform: scale(1.1, 1.1);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+.submit-btn {
+    padding: 0 45px;
+    text-align: center;
+    color: black;
+    border-radius: 60px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 50px;
+    transition: all 0.5s;
+    z-index: 1;
+    background-image: white;
+    border: none;
+    outline: none;
+}
+
+.book-form-field textarea:focus {
+    border-color: #67676a;
+}
+
+.book-form .book-input:focus {
+    outline: none;
+}
+
+.book-form .book-input:focus+label {
+    background: #67676a;
+    color: #20202a;
+}
+
+.invalid-feedback .error {
+    font-size: 0.8rem;
+}
+/* end of insert book */
